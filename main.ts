@@ -1,15 +1,10 @@
+servos.P0.setRange(10, 170)
 basic.forever(function () {
-    led.plot(pins.map(
+    pins.servoWritePin(AnalogPin.P0, pins.map(
     pins.analogReadPin(AnalogPin.P1),
     0,
     1023,
-    0,
-    4
-    ), pins.map(
-    pins.analogReadPin(AnalogPin.P2),
-    0,
-    1023,
-    0,
-    4
+    10,
+    170
     ))
 })
